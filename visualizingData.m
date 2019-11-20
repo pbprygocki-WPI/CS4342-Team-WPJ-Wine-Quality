@@ -1,7 +1,7 @@
-data.X = readtable('C:\Users\Wenjing Ying\OneDrive\Machine Learning\Project\winequality-redTrainData.csv'); % features
+data.X = readtable('winequality-redTrainData.csv'); % features
 opt = delimitedTextImportOptions('PreserveVariableNames',true)
 opt = setvartype(opt,'double');
-data.Y = readtable('C:\Users\Wenjing Ying\OneDrive\Machine Learning\Project\winequality-redTrainLabel.csv',opt); % labels
+data.Y = readtable('winequality-redTrainLabel.csv',opt); % labels
 
 for Type = 1:8
     classindex{Type} = find(data.Y{:,1} == Type);
