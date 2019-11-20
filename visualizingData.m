@@ -15,5 +15,5 @@ for fi = 1:11
         h{tk} = histcounts(classData{tk},bins);
     end
     figure
-    bar(edges(1:end-1),[h1; h2]');
+    bar([h{3};h{4};h{5};h{6};h{7};h{8}]);
 end
