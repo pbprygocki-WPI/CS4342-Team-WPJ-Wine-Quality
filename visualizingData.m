@@ -7,19 +7,13 @@ for Type = 1:8
     classindex{Type} = find(data.Y{:,1} == Type);
 end
 
-
-
 % visualize the data
 for fi = 1:11
-    for Type = 3:8
-        classData{Type} = 
+    for tk = 3:8
+        bins = 10;
+        classData{tk} = data.X{classindex{tk},fi};
+        h{tk} = histcounts(classData{tk},bins);
     end
+    figure
+    bar(edges(1:end-1),[h1; h2]');
 end
-
-data1 = randn(20,1);
-data2 = randn(30,1);
-edges = -4:1:4;
-h1 = histcounts(data1,edges);
-h2 = histcounts(data2,edges);
-figure
-bar(edges(1:end-1),[h1; h2]’)
